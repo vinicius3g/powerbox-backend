@@ -242,48 +242,44 @@ Esse exemplo faz uso do [Operador Condicional Ternário](https://developer.mozil
 
 # Desafio
 
-Neste desafio vocês criarão uma página de produto, a estrutura base dela e um [JSON](https://www.json.org/json-pt.html) que possui os dados do produto que deverá exibir.
+Neste desafio vocês deverão criar uma calculadora. Atenção nos pontos descritos abaixo:
 
-Todos já estão na pasta desafio e devem ser utilizados. A página deverá conter **pelo menos** os componentes: 
+- Deve ter um componente de função chamado `<Button>`, este deve receber via props o valor do botão 
+- **Se achar necessário** crie um componente `<ButtonOperator>` para diferenciar dos botões comuns
+- Deve ter um componente de classe chamado `<Input>`, este componente é mais complexo:
+  - Receber via props o valor digitado
+  - Tratar o valor digitado para fazer o calculo (guarde os valores no state)
+- A calculadora deve pelo menos fazer uma soma e subtração
 
-- Imagem de Produto
-- Nome de Produto
-- Preço do Produto
-- Variações de Produto
-- Botão de Compra
+Se sentir necessidade de modificar essa estrutura pode fazer, mas os componentes descritos acima DEVEM existir.
 
-Inicialização:
+#### Para se destacar na execução:
+
+- Faça também as operações de multiplicação e divisão
+- Faça com que possa ser feito varios calculos na mesma digitação, ex. Digitado: `1 + 2 * 2`, Resultado: `5`
+- Crie uma branch `seu-nome/basico-dos-componentes` no seu repositório.
+- Personalize o app com CSS.
+- Se preocupe com a visualização no celular.
+- Organize melhor suas pastas e arquivos:
+  - Utilize os nomes dos componentes que criar como o nome dos arquivos.
+  - Crie uma pasta `components` dentro do `src` para colocar todos os componentes secundarios como o Button.
+
+#### Inicialização:
 - De um [Fork](https://docs.gitlab.com/ee/gitlab-basics/fork-project.html) no repositório: https://gitlab.com/acct.fateclab/turma-1-sem-2019/02-basico-dos-componentes;
 - Agora você deve clonar o repositório localmente, há um botão azul "Clone" no seu repositório do GitLab, clique nele e use a URL com **HTTPS**. 
 - Agora localmente abra uma pasta e use o botão direito do Mouse para abrir o "Git Bash", com esse atalho você chegará na pasta que quer mais rapidamente pelo terminal.
 - Use o comando `git clone url-copiada-do-gitlab` para que a estrutura de pastas do repositório seja clonada na sua pasta
-- Na pasta desafio você já terá a organização de pastas do `create-react-app` e além disso já disponibilizamos um arquivo `ProductPage.js` que será onde você 
+- Na pasta " você já terá a organização de pastas do `create-react-app`.
 
-Detalhes de execução:
-- Preço do Produto:
-  - Deve exibir o preço de riscado e o preço por destacado. 
-  - Se os dois preços forem iguais, o preço de não deve ser exibido.
-- Variações de Produto: 
-  - Devem ser botões para trocar as informações do produto que esta sendo exibido na página. 
-  - Ao clicar em um botão todos os componentes devem receber os dados do produto que foi clicado
-  - Não exiba os produtos que não estiverem disponiveis
-  - Cada variação esta contida na variavel `items` do JSON
-- Botão de Compra: 
-  - Deve exibir em um `alert()` a mensagem: "Você adicionou ao carrinho o produto: {nome do produto} por {preço do produto}"
-
-Entrega:
+#### Entrega:
 - Assim que terminar dê `git push origin seu-nome/basico-dos-componentes`
 - Acesse o menu "Merge Requests", configure o "Target Branch" para o [repositório original](https://gitlab.com/acct.fateclab/turma-1-sem-2019/01-basico-dos-componentes) para que seu App seja avaliado e revisado e para que possamos te dar um feedback.
 - O nome do Merge Request deve ser o seu nome completo.
 - Crie o Merge Request
 
-Para se destacar na execução:
 
-- Crie uma branch `seu-nome/basico-dos-componentes` no seu repositório.
-- Personalize a página com CSS.
-- Crie mais variações de produtos.
-- Se preocupe com a visualização do Mobile.
-- Utilize mais componentes com as outras variaveis disponiveis no JSON disponibilizado.
-- Organize melhor suas pastas e arquivos:
-  - Utilize os nomes dos componentes que criar como o nome dos arquivos.
-  - Crie uma pasta `components` dentro do `src` para colocar todos os componentes que serão utilizados no `ProductPage`.
+# Desafio Antigo - Não obrigatório
+
+O desafio do primeiro semestre foi considerado MUITO DIFICIL, porem se quiser fazer ele você pode, mas por favor faça o Fork **DESTE REPOSITÓRIO**.
+
+https://gitlab.com/acct.fateclab/turma-1-sem-2019/02-basico-dos-componentes
