@@ -32,4 +32,4 @@ App.use(express.urlencoded({ extended: true }))//permite o envio de arquvos nas 
 App.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')))//toda a vez que se reeber uma requisição na rota files vai ser buscado os arquivos fisicos da pasta tmp
 App.use(require('./routes'))//caminho do routes 
 
-server.listen(8080)// recebe requisições tanto http quando websocket
+server.listen(process.env.PORT || 8080)// recebe requisições tanto http quando websocket// variavel port faz com que o heroku escolha uma porta automaticamente se nao escolher entra na que ja esta definida
