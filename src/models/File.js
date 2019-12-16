@@ -19,6 +19,7 @@ const File = new mongoose.Schema({//schema funciona como uma tabela no mongo db
 })
 //campo virtual nao exixte no banco de no lado do banco de dados mais sim do lado do backend auxiliando o front nas suas buscas
 File.virtual('url').get(function () {
-    return `http://localhost:8080/files/${encodeURIComponent(this.path)}`
+    const url = process.env.URL || 'http://localhost:8080'
+    return `${url}/files/${encodeURIComponent(this.path)}`
 })
 module.exports = mongoose.model("File", File)
