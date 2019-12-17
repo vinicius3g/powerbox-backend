@@ -6,7 +6,7 @@ class BoxController {
         return res.json(box);
     }
     async show(req, res) {                                   //traz todos os ids na pesquisa
-        const box = await (await Box.findById(req.params.id)).populate({
+        const box = await Box.findById(req.params.id).populate({
             path: 'files',
             options: { sort: { createdAt: -1 } }//ordena de forma decrescente
         })
